@@ -1,0 +1,18 @@
+node_modules/
+dist/
+
+# APIキー。*.local だけだと素の .env が漏れる
+.env
+.env.*
+!.env.example
+*.local
+
+# 実際の位置履歴。絶対にコミットしないこと。
+# Googleタイムラインのエクスポートは自宅・職場の座標そのもので、
+# 位置履歴は最も機微な個人データの一つ。テストは合成データだけで書く。
+data/samples/
+
+# 元データ（再取得できる。サイズも大きい）
+data/raw/
+
+scripts/__pycache__/
