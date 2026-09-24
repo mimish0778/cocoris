@@ -16,3 +16,6 @@ data/samples/
 data/raw/
 
 scripts/__pycache__/
+
+# 無関係なデータファイル
+CEO_PayRatio_dataset_v1.xlsx
