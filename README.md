@@ -10,6 +10,8 @@
 
 **公開ページ:** https://cocoris.pages.dev
 
+<img src="images/screenshot.png" alt="危険度タブと備蓄タブ（開発者モードのサンプルデータ）" width="640">
+
 ## 主な機能
 
 画面下部の 4 つのタブで切り替えます。
@@ -217,3 +219,7 @@ npm run deploy
 - 「妊産婦・乳幼児を守る災害対策ガイドライン」（東京都福祉局）
 - 背景地図: [地理院タイル](https://maps.gsi.go.jp/development/ichiran.html)（国土地理院）
 - 経路探索: [openrouteservice](https://openrouteservice.org/)、© [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors（ODbL）
+
+## ライセンス
+
+ソースコードは [MIT License](LICENSE) です。`public/data/` のデータは、上記「データの出典」に挙げた各出典元の利用条件に従います。

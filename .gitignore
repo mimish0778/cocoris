@@ -1,5 +1,11 @@
 node_modules/
 dist/
+*.tsbuildinfo
+
+# エディタ・ツールのローカル設定
+.claude/
+.vscode/
+.DS_Store
 
 # APIキー。*.local だけだと素の .env が漏れる
 .env
