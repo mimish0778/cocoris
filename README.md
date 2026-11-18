@@ -157,7 +157,7 @@ cocoris/
 │   ├── ui/             React のコンポーネントと localStorage の読み書き
 │   ├── main.tsx        エントリポイント
 │   └── styles.css
-├── docs/               調査結果、実装状況、提出用の資料
+├── docs/               設計メモ、調査結果、実装状況、提出用の資料（docs/README.md に一覧）
 ├── index.html
 └── vite.config.ts
 ```
