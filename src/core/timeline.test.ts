@@ -71,7 +71,7 @@ const SAMPLE = [
 
 describe('geo URI', () => {
   it('緯度経度を取り出す', () => {
-    expect(parseGeoUri('geo:35.681236,139.767125')).toEqual({ lat: 35.61733, lng: 139.521283 });
+    expect(parseGeoUri('geo:35.681236,139.767125')).toEqual({ lat: 35.681236, lng: 139.767125 });
   });
 
   it('負の値も読める', () => {
