@@ -14,7 +14,7 @@ import { Mark } from './Mark';
 import { PlaceSheet } from './PlaceSheet';
 import { RankingTab } from './RankingTab';
 import { StocklistTab } from './StocklistTab';
-import { loadSurvey, type SurveyData, clearAll as clearAllStorage, saveManualPlaces, loadDevMode, saveDevMode } from './storage';
+import { loadSurvey, type SurveyData, clearAll as clearAllStorage, saveManualPlaces, loadManualPlaces, loadDevMode, saveDevMode } from './storage';
 import { SurveyTab } from './SurveyTab';
 
 type Screen = 'map' | 'ranking' | 'survey' | 'stock';
@@ -74,9 +74,10 @@ export function App() {
   const [screen, setScreen] = useState<Screen>('map');
   const [showSettings, setShowSettings] = useState(false);
 
-  const [entered, setEntered] = useState(false);
+  const [manualPlaces, setManualPlaces] = useState<ManualPlace[]>(() => loadManualPlaces());
+  // 保存済みの手動登録があれば、再読み込み後もそのまま危険度タブを表示する
+  const [entered, setEntered] = useState(() => manualPlaces.length > 0);
   const [importedStays, setImportedStays] = useState<StayPoint[]>([]);
-  const [manualPlaces, setManualPlaces] = useState<ManualPlace[]>([]);
   const [excluded, setExcluded] = useState<ReadonlySet<string>>(new Set());
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [importNote, setImportNote] = useState<string | null>(null);
@@ -163,6 +164,7 @@ export function App() {
   const updateManual = (next: ManualPlace[]) => {
     setManualPlaces(next);
     saveManualPlaces(next);
+    if (next.length > 0) setEntered(true);
   };
 
   const navItems: { id: Screen; label: string; icon: React.ReactNode }[] = [
