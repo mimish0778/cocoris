@@ -1,5 +1,7 @@
 # ココリス（cocoris）
 
+[![test](https://github.com/mimish0778/cocoris/actions/workflows/test.yml/badge.svg)](https://github.com/mimish0778/cocoris/actions/workflows/test.yml)
+
 > あなたのいつもの場所を、覚えている。
 
 よく行く場所の地震リスクを危ない順に並べ、それぞれの場所で東京都が指定している避難場所まで示す、乳幼児を育てる親のための防災 Web アプリです。
@@ -55,7 +57,7 @@ npm run dev
 | コマンド | 内容 |
 |---|---|
 | `npm run dev` | 開発サーバーを起動 |
-| `npm test` | テストを実行（Vitest。`src/core/` のロジックが対象） |
+| `npm test` | テストを実行（Vitest。`src/core/` のロジックが対象。GitHub Actions でも push ごとにテストとビルドを実行） |
 | `npm run test:watch` | テストを監視モードで実行 |
 | `npm run build` | 型チェックのあと `dist/` に本番用ファイルを出力 |
 | `npm run preview` | ビルド結果をローカルで確認 |
