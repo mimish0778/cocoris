@@ -1,4 +1,4 @@
-import maplibregl from 'maplibre-gl';
+import maplibregl from './maplibre';
 import { useEffect, useRef, useState } from 'react';
 
 import type { ChoChomeIndex } from '../core/chochome';
