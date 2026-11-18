@@ -212,9 +212,18 @@ export function App() {
               {importNote && <p className="note" style={{ margin: '0 0 16px' }}>{importNote}</p>}
               <div className="empty">
                 <h2>位置履歴を読み込んでください</h2>
-                <p>Google タイムラインの JSON ファイルを読み込むと、<br />よく行く場所のリスク順が表示されます。</p>
+                <p>Google タイムラインの JSON ファイルを読み込むと、よく行く場所のリスク順が表示されます。</p>
                 <button className="btn btn--primary" onClick={() => setShowSettings(true)} style={{ textAlign: 'center' }}>
                   データを読み込む
+                </button>
+                {/* 位置履歴を持っていない人でも、すぐに機能を試せるようにする */}
+                <p className="empty__sample">位置履歴がなくても、サンプルデータで試せます。</p>
+                <button
+                  className="btn btn--ghost"
+                  onClick={() => { setDevMode(true); saveDevMode(true); }}
+                  style={{ textAlign: 'center' }}
+                >
+                  サンプルデータで試す
                 </button>
               </div>
             </div>
